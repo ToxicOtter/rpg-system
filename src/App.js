@@ -18,7 +18,7 @@ function App(){
 
 function Header(){
   return (
-    <div>
+    <div className="header">
       <h1>Dungeons & Dragons</h1>
       <form>
         <label>
@@ -56,7 +56,7 @@ function Header(){
 
 function StatusLeft(){
   return (
-    <div>
+    <div className="status-left">
       <form>
         <label>
           Bônus de Proeficiência
@@ -227,16 +227,24 @@ function StatusLeft(){
 } 
 
 function StatusMid(){
-  return null;
+  return (
+    <div className="status-mid">
+      <p>status mid</p>
+    </div>
+  );
 } 
 
 function StatusRight(){
-  return null;
+  return (
+    <div className="status-right">
+      <p>status right</p>
+    </div>
+  );
 }  
 
 function AttaksAndSummons(){
   return (
-    <div>
+    <div className="attack">
       <form>
         {/*falta coisa aqui */}
         <label>
@@ -250,7 +258,7 @@ function AttaksAndSummons(){
 
 function CharacteristcsAndTalents(){
   return (
-    <div>
+    <div className="carac">
       <form>
         <label>
           Características e Talentos
@@ -263,7 +271,7 @@ function CharacteristcsAndTalents(){
 
 function AnotherProeficiences(){
   return (
-    <div>
+    <div className="outro">
       <form>
         <label>
           Outras Proeficiências & Idiomas
@@ -276,7 +284,7 @@ function AnotherProeficiences(){
 
 function EquipamentsAndNotes(){
   return (
-    <div>
+    <div className="equip">
       <form>
         <label>
           Equipamentos & Notas do Personagem

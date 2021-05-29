@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  grid-template-areas: 
+    "head head head"
+    "statusLeft statusMid statusRight"
+    "statusLeft atack carac"
+    "outro equip equip";
+}
+
+/* header */
+.header {
+  grid-area: head;
+  background-color: aliceblue;
+  display: flex;
+}
+
+/* status left*/
+.status-left {
+  grid-area: statusLeft;
+  background-color: aqua;
+}
+
+/* status mid */
+.status-mid {
+  grid-area: statusMid;
+  background-color: bisque;
+}
+
+/* status rigth */
+.status-right {
+  grid-area: statusRight;
+  background-color: burlywood;
+}
+
+/* attack */
+.attack {
+  grid-area: atack;
+  background-color: crimson;
+}
+
+/* carac */
+.carac {
+  grid-area: carac;
+  background-color: darkblue;
+}
+
+/* outro */
+.outro {
+  grid-area: outro;
+  background-color: darkgrey;
+}
+
+/* equip */
+.equip {
+  grid-area: equip;
+  background-color: darkolivegreen;
+}
