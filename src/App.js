@@ -1,9 +1,9 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 
 function App(){
   return (
-    <div className="container">
+    <form className="container">
       <Header />
       <StatusLeft />
       <StatusMid />
@@ -12,45 +12,46 @@ function App(){
       <CharacteristcsAndTalents />
       <AnotherProeficiences />
       <EquipamentsAndNotes />
-    </div>
+    </form>
   )
 }
 
 function Header(){
   return (
-    <div className="header">
-      <h1>Dungeons & Dragons</h1>
-      <form>
-        <label>
-          Nome do Personagem
-          <input type="text"></input>
-        </label>
-        <label>
-          Classe & Nível
-          <input type="text"></input>
-        </label>
-        <label>
-          Antecedente
-          <input type="text"></input>
-        </label>
-        <label>
-          Nome do Jogador
-          <input type="text"></input>
-        </label>
-        <label>
-          Raça
-          <input type="text"></input>
-        </label>
-        <label>
-          Alinhamento
-          <input type="text"></input>
-        </label>
-        <label>
-          Pontos de experiência
-          <input type="number"></input>
-        </label>
-      </form>
-    </div>
+    <header>
+      <section className="charname">
+        <label for="charname">Nome do Personagem</label>
+        <input type="text" name="charname"></input>
+      </section>
+      <section className="headerinfo">
+        <ul>
+          <li>
+            <label for="classeNivel">Classe & Nível</label>
+            <input type="text" name="classeNivel"></input>    
+          </li>
+          <li>
+            <label for="antecedentes">Antecedente</label>
+            <input type="text" name="antecedentes"></input>
+          </li>
+          <li>
+            <label for="playerName">Nome do Jogador</label>
+            <input type="text" name="playerName"></input>
+          </li>
+          <li>
+            <label for="raca">Raça</label>
+            <input type="text" name="raca"></input>
+          </li>
+          <li>
+            <label for="alinhamento">Alinhamento</label>
+            <input type="text" name="alinhamento"></input>
+          </li>
+          <li>
+            <label for="expPoints">Pontos de experiência</label>
+            <input type="number" name="expPoints"></input>
+          </li>
+        </ul>
+      </section>
+    </header>
   )
 }
 
@@ -261,8 +262,8 @@ function CharacteristcsAndTalents(){
     <div className="carac">
       <form>
         <label>
-          Características e Talentos
-          <input type="text"></input>
+          <textarea cols="50" rows="5"></textarea>
+          <span>Características e Talentos</span>
         </label>
       </form>
     </div>
