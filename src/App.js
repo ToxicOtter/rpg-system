@@ -7,13 +7,16 @@ function App() {
       <Header />
       <main>
         <StatusLeft />
-        <StatusMid />
+        <section>
+          <StatusMid />
+          <AttaksAndSummons />
+          <EquipamentsAndNotes />
+        </section>
+        <section>
+          <StatusRight />
+          <CharacteristcsAndTalents />
+        </section>
       </main>
-      <StatusRight />
-      <AttaksAndSummons />
-      <CharacteristcsAndTalents />
-      <EquipamentsAndNotes />
-      {/* lembrar que o main vem até aqui */}
     </form>
   )
 }
@@ -301,132 +304,212 @@ function StatusLeft() {
 
 function StatusMid() {
   return (
-    <section>
-      <section className="combate">
-        <div className="classeArmadura">
-          <div>
-            <label for="classeArmadura">Classe de Armadura</label>
-            <input name="classeArmadura" placeholder="10" type="text" />
-          </div>
+    <section className="combate">
+      <div className="classeArmadura">
+        <div>
+          <label for="classeArmadura">Classe de Armadura</label>
+          <input name="classeArmadura" placeholder="10" type="text" />
         </div>
-        <div class="iniciativa">
-          <div>
-            <label for="iniciativa">Iniciativa</label>
-            <input name="iniciativa" placeholder="+0" type="text" />
-          </div>
+      </div>
+      <div class="iniciativa">
+        <div>
+          <label for="iniciativa">Iniciativa</label>
+          <input name="iniciativa" placeholder="+0" type="text" />
         </div>
-        <div class="deslocamento">
-          <div>
-            <label for="deslocamento">Deslocamento</label>
-            <input name="deslocamento" placeholder="30" type="text" />
-          </div>
+      </div>
+      <div class="deslocamento">
+        <div>
+          <label for="deslocamento">Deslocamento</label>
+          <input name="deslocamento" placeholder="30" type="text" />
         </div>
+      </div>
 
-        <div className="hp">
-          <div className="regular">
-            <div className="maximo">
-              <label for="maxhp">Pontos de vida máximos</label>
-              <input name="maxhp" placeholder="10" type="text" />
-            </div>
-            <div className="atual">
-              <label for="currenthp">Pontos de vida atuais</label>
-              <input name="currenthp" type="text" />
-            </div>
+      <div className="hp">
+        <div className="regular">
+          <div className="maximo">
+            <label for="maxhp">Pontos de vida máximos</label>
+            <input name="maxhp" placeholder="10" type="text" />
           </div>
-          <div className="temporario">
-            <label for="temphp">Pontos de vida temporários</label>
-            <input name="temphp" type="text" />
+          <div className="atual">
+            <label for="currenthp">Pontos de vida atuais</label>
+            <input name="currenthp" type="text" />
           </div>
         </div>
+        <div className="temporario">
+          <label for="temphp">Pontos de vida temporários</label>
+          <input name="temphp" type="text" />
+        </div>
+      </div>
 
-        <div className="dadoVida">
-          <div>
-            <div className="total">
-              <label for="totalhd">Total</label>
-              <input name="totalhd" placeholder="2d10" type="text" />
-            </div>
-            <div className="sobrando">
-              <label for="sobrandohd">Dado de Vida</label>
-              <input name="sobrandohd" type="text" />
-            </div>
+      <div className="dadoVida">
+        <div>
+          <div className="total">
+            <label for="totalhd">Total</label>
+            <input name="totalhd" placeholder="2d10" type="text" />
+          </div>
+          <div className="sobrando">
+            <label for="sobrandohd">Dado de Vida</label>
+            <input name="sobrandohd" type="text" />
           </div>
         </div>
+      </div>
 
-        <div className="salvaguardaContraMorte">
-          <div>
-            <div className="label">
-              <label>Salvaguarda Contra Morte</label>
-            </div>
-            <div className="marcas">
-              <div className="sucessosMorte">
-                <label>Sucessos</label>
-                <div className="bubbles"> 
-                  <input name="sucessosMorte1" type="checkbox" />
-                  <input name="sucessosMorte2" type="checkbox" />
-                  <input name="sucessosMorte3" type="checkbox" />
-                </div>
+      <div className="salvaguardaContraMorte">
+        <div>
+          <div className="label">
+            <label>Salvaguarda</label>
+          </div>
+          <div className="marcas">
+            <div className="sucessosMorte">
+              <label>Sucessos</label>
+              <div className="bubbles">
+                <input name="sucessosMorte1" type="checkbox" />
+                <input name="sucessosMorte2" type="checkbox" />
+                <input name="sucessosMorte3" type="checkbox" />
               </div>
-              <div className="fracassosMorte">
-                <label>Falhas</label>
-                <div className="bubbles"> 
-                  <input name="fracassosMorte1" type="checkbox" />
-                  <input name="fracassosMorte2" type="checkbox" />
-                  <input name="fracassosMorte3" type="checkbox" />
-                </div>
+            </div>
+            <div className="fracassosMorte">
+              <label>Falhas</label>
+              <div className="bubbles">
+                <input name="fracassosMorte1" type="checkbox" />
+                <input name="fracassosMorte2" type="checkbox" />
+                <input name="fracassosMorte3" type="checkbox" />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
-  );
-}
-
-function StatusRight() {
-  return (
-    <div className="status-right">
-      <p>status right</p>
-    </div>
   );
 }
 
 function AttaksAndSummons() {
   return (
-    <div className="attack">
-      <form>
-        {/*falta coisa aqui */}
-        <label>
-          Ataques & Conjuração
-          <input type="text"></input>
-        </label>
-      </form>
-    </div>
-  )
-}
-
-function CharacteristcsAndTalents() {
-  return (
-    <div className="carac">
-      <form>
-        <label>
-          <textarea cols="50" rows="5"></textarea>
-          <span>Características e Talentos</span>
-        </label>
-      </form>
-    </div>
+    <section class="ataqueEMagia">
+      <div>
+        <label>Ataques e Conjuração</label>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Nome
+              </th>
+              <th>
+                Bônus Ataque
+              </th>
+              <th>
+                Dano/Tipo
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input name="atkname1" type="text" />
+              </td>
+              <td>
+                <input name="atkbonus1" type="text" />
+              </td>
+              <td>
+                <input name="atkdano1" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="atkname2" type="text" />
+              </td>
+              <td>
+                <input name="atkbonus2" type="text" />
+              </td>
+              <td>
+                <input name="atkdano2" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="atkname3" type="text" />
+              </td>
+              <td>
+                <input name="atkbonus3" type="text" />
+              </td>
+              <td>
+                <input name="atkdano3" type="text" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <textarea></textarea>
+      </div>
+    </section>
   )
 }
 
 function EquipamentsAndNotes() {
   return (
-    <div className="equip">
-      <form>
-        <label>
-          Equipamentos & Notas do Personagem
-          <input type="text"></input>
-        </label>
-      </form>
-    </div>
+    <section className="equipamentos">
+      <div>
+        <label>Equipamento</label>
+        <div className="dinheiro">
+          <ul>
+            <li>
+              <label for="cp">cp</label>
+              <input name="cp" />
+            </li>
+            <li>
+              <label for="sp">sp</label>
+              <input name="sp" />
+            </li>
+            <li>
+              <label for="ep">ep</label>
+              <input name="ep" />
+            </li>
+            <li>
+              <label for="gp">gp</label>
+              <input name="gp" />
+            </li>
+            <li>
+              <label for="pp">pp</label>
+              <input name="pp" />
+            </li>
+          </ul>
+        </div>
+        <textarea placeholder="Lista de equipamentos aqui"></textarea>
+      </div>
+    </section>
+  )
+}
+
+function StatusRight() {
+  return (
+    <section className="flavor">
+      <div className="personalidade">
+        <label for="personalidade">Personalidade</label>
+        <textarea name="personalidade"></textarea>
+      </div>
+      <div className="ideais">
+        <label for="ideais">Ideais</label>
+        <textarea name="ideais"></textarea>
+      </div>
+      <div className="vinculos">
+        <label for="vinculos">Vínculos</label>
+        <textarea name="vinculos"></textarea>
+      </div>
+      <div className="fraquezas">
+        <label for="fraquezas">Fraquezas</label>
+        <textarea name="fraquezas"></textarea>
+      </div>
+    </section>
+  );
+}
+
+function CharacteristcsAndTalents() {
+  return (
+    <section className="caracteristicas">
+      <div>
+        <label for="caracteristicas">Características e Talentos</label>
+        <textarea name="caracteristicas"></textarea>
+      </div>
+    </section>
   )
 }
 
