@@ -9,6 +9,7 @@ $bubble-size: 10px;
 $small-box-width: 30px;
 $large-box-width: 70px;
 
+/* global styles */
 .red {
   background: red;
 }
@@ -86,6 +87,7 @@ form.charsheet {
     text-transform: uppercase;
     font-size: 12px;
   }
+  /* header */
   header {
     display: flex;
     align-content: stretch;
