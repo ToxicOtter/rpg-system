@@ -1,6 +1,24 @@
 import './App.scss';
 import React, { Component } from 'react';
 
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyCL06BnO3QjBxNiZHDlpcLwS5eOFoVflKg",
+  authDomain: "rpg-system-7c298.firebaseapp.com",
+  projectId: "rpg-system-7c298",
+  storageBucket: "rpg-system-7c298.appspot.com",
+  messagingSenderId: "171426896799",
+  appId: "1:171426896799:web:66b564fe17de1e96353baa",
+  measurementId: "G-M0B1EX98Q4"
+});
+
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const colecao = firestore.collection("teste");
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -151,10 +169,64 @@ class App extends Component {
           otherprofs: ""
         },
         sectionMid: {
-
+          ac: "",
+          initiative: "",
+          speed: "",
+          hp: {
+            maxhp: "",
+            currenthp: {},
+            temphp: {}
+          },
+          hitdice: {
+            totalhd: "",
+            remaininghd: ""
+          },
+          deathsaves: {
+            deathsuccesses: {
+              deathsuccess1: "",
+              deathsuccess2: "",
+              deathsuccess3: ""
+            },
+            deathfailures: {
+              deathfail1: "",
+              deathfail2: "",
+              deathfail3: ""
+            }
+          },
+          attacksandspellcasting: {
+            attacknames: {
+              atkname1: "",
+              atkname2: "",
+              atkname3: ""
+            },
+            attackbonus: {
+              atkbonus1: "",
+              atkbonus2: "",
+              atkbonus3: ""
+            },
+            attackdamage: {
+              atkdamage1: "",
+              atkdamage2: "",
+              atkdamage3: ""
+            }
+          },
+          equipament: {
+            cp: "",
+            sp: "",
+            ep: "",
+            gp: "",
+            pp: "",
+            equipamenttext: ""
+          }
         },
         sectionRight: {
-
+          flavor: {
+            personality: "",
+            ideals: "",
+            bonds: "",
+            flaws: ""
+          },
+          features: ""
         }
       }
     }
@@ -163,17 +235,22 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit = event => {
-    alert(`${this.state.playerData.header.race}`);
-    console.log(this.state.playerData.header);
+  handleSubmit = async (event) => {
     event.preventDefault();
+    await colecao.add({
+      agoravai: "vai"
+    }).catch(error => console.log(error));
+
+    {/*firestore.collection("teste").add({
+      teste: "teste"
+    }).catch(error => console.log(error));*/}
   }
 
   handleTestChange = event => {
-    let playerData = {...this.state.playerData};
+    let playerData = { ...this.state.playerData };
 
-    for(let key in playerData){
-      if (playerData[key].hasOwnProperty(event.target.name)){
+    for (let key in playerData) {
+      if (playerData[key].hasOwnProperty(event.target.name)) {
         playerData[key][event.target.name] = event.target.value;
       }
     }
@@ -183,25 +260,37 @@ class App extends Component {
   render() {
     return (
       <form className="charsheet" onSubmit={this.handleSubmit}>
-        <Header 
+        <Header
           handleTestChange={this.handleTestChange}
           obj={this.state.playerData.header}
         />
         <main>
-          <SectionLeft 
+          <SectionLeft
             handleTestChange={this.handleTestChange}
           />
-          <SectionMid 
+          <SectionMid
             handleTestChange={this.handleTestChange}
           />
-          <SectionRight 
+          <SectionRight
             handleTestChange={this.handleTestChange}
           />
         </main>
         <button type="submit">Uepa</button>
+        <SingIn />
       </form>
     )
   }
+}
+
+function SingIn(){
+  const signInWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider);
+  }
+
+  return (
+    <button onClick={signInWithGoogle}>Sign In</button>
+  )
 }
 
 class Header extends Component {
@@ -598,7 +687,7 @@ function SectionMid() {
       <section className="equipment">
         <div>
           <label>Equipment</label>
-          <div className="money">
+          <div className="money"> 
             <ul>
               <li>
                 <label htmlFor="cp">cp</label>
@@ -622,7 +711,7 @@ function SectionMid() {
               </li>
             </ul>
           </div>
-          <textarea placeholder="Equipment list here"></textarea>
+          <textarea placeholder="Equipment list here" name="equipamenttext"></textarea>
         </div>
       </section>
     </section>
