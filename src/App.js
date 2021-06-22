@@ -24,13 +24,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      charData: "",
-      teste: "",
       playerData: {
         header: {
           charname: "",
           classlevel: "",
-          backgound: "",
+          background: "",
           playername: "",
           race: "",
           alignment: "",
@@ -38,132 +36,72 @@ class App extends Component {
         },
         sectionLeft: {
           scores: {
-            strength: {
-              Strengthscore: "",
-              Strengthmod: ""
-            },
-            dexterity: {
-              Dexterityscore: "",
-              Dexteritymod: ""
-            },
-            constitution: {
-              Constitutionscore: "",
-              Constitutionmod: ""
-            },
-            wisdom: {
-              Wisdomscore: "",
-              Wisdommod: ""
-            },
-            intelligence: {
-              Intelligencescore: "",
-              Intelligencemod: ""
-            },
-            charisma: {
-              Charismascore: "",
-              Charismamod: ""
-            }
+            Strengthscore: "",
+            Strengthmod: "",
+            Dexterityscore: "",
+            Dexteritymod: "",
+            Constitutionscore: "",
+            Constitutionmod: "",
+            Wisdomscore: "",
+            Wisdommod: "",
+            Intelligencescore: "",
+            Intelligencemod: "",
+            Charismascore: "",
+            Charismamod: ""
           },
           inspiration: "",
           proficiencybonus: "",
           saves: {
-            strength: {
-              Strengthsave: "",
-              Strengthsaveprof: ""
-            },
-            dexterity: {
-              Dexteritysave: "",
-              Dexteritysaveprof: ""
-            },
-            constitution: {
-              Constitutionsave: "",
-              Constitutionsaveprof: ""
-            },
-            wisdom: {
-              Wisdomsave: "",
-              Wisdomsaveprof: ""
-            },
-            intelligence: {
-              Intelligencesave: "",
-              Intelligencesaveprof: ""
-            },
-            charisma: {
-              Charismasave: "",
-              Charismasaveprof: ""
-            }
+            Strengthsave: "",
+            Strengthsaveprof: "",
+            Dexteritysave: "",
+            Dexteritysaveprof: "",
+            Constitutionsave: "",
+            Constitutionsaveprof: "",
+            Wisdomsave: "",
+            Wisdomsaveprof: "",
+            Intelligencesave: "",
+            Intelligencesaveprof: "",
+            Charismasave: "",
+            Charismasaveprof: ""
           },
           skills: {
-            Acrobatics: {
-              Acrobatics: "",
-              Acrobaticsprof: ""
-            },
-            AnimalHandling: {
-              AnimalHandling: "",
-              AnimalHandlingprof: ""
-            },
-            Arcana: {
-              Arcana: "",
-              Arcanaprof: ""
-            },
-            Athletics: {
-              Athletics: "",
-              Athleticsprof: ""
-            },
-            Deception: {
-              Deception: "",
-              Deceptionprof: ""
-            },
-            History: {
-              History: "",
-              Historyprof: ""
-            },
-            Insight: {
-              Insight: "",
-              Insightprof: ""
-            },
-            Intimidation: {
-              Intimidation: "",
-              Intimidationprof: ""
-            },
-            Investigation: {
-              Investigation: "",
-              Investigationprof: ""
-            },
-            Medicine: {
-              Medicine: "",
-              Medicineprof: ""
-            },
-            Nature: {
-              Nature: "",
-              Natureprof: ""
-            },
-            Perception: {
-              Perception: "",
-              Perceptionprof: ""
-            },
-            Performance: {
-              Performance: "",
-              Performanceprof: ""
-            },
-            Persuasion: {
-              Persuasion: "",
-              Persuasionprof: ""
-            },
-            Religion: {
-              Religion: "",
-              Religionprof: ""
-            },
-            SleightofHand: {
-              SleightofHand: "",
-              SleightofHandprof: ""
-            },
-            Stealth: {
-              Stealth: "",
-              Stealthprof: ""
-            },
-            Survival: {
-              Survival: "",
-              Survivalprof: ""
-            }
+            Acrobatics: "",
+            Acrobaticsprof: "",
+            AnimalHandling: "",
+            AnimalHandlingprof: "",
+            Arcana: "",
+            Arcanaprof: "",
+            Athletics: "",
+            Athleticsprof: "",
+            Deception: "",
+            Deceptionprof: "",
+            History: "",
+            Historyprof: "",
+            Insight: "",
+            Insightprof: "",
+            Intimidation: "",
+            Intimidationprof: "",
+            Investigation: "",
+            Investigationprof: "",
+            Medicine: "",
+            Medicineprof: "",
+            Nature: "",
+            Natureprof: "",
+            Perception: "",
+            Perceptionprof: "",
+            Performance: "",
+            Performanceprof: "",
+            Persuasion: "",
+            Persuasionprof: "",
+            Religion: "",
+            Religionprof: "",
+            SleightofHand: "",
+            SleightofHandprof: "",
+            Stealth: "",
+            Stealthprof: "",
+            Survival: "",
+            Survivalprof: ""
           },
           passiveperception: "",
           otherprofs: ""
@@ -174,41 +112,31 @@ class App extends Component {
           speed: "",
           hp: {
             maxhp: "",
-            currenthp: {},
-            temphp: {}
+            currenthp: "",
+            temphp: ""
           },
           hitdice: {
             totalhd: "",
             remaininghd: ""
           },
           deathsaves: {
-            deathsuccesses: {
-              deathsuccess1: "",
-              deathsuccess2: "",
-              deathsuccess3: ""
-            },
-            deathfailures: {
-              deathfail1: "",
-              deathfail2: "",
-              deathfail3: ""
-            }
+            deathsuccess1: "",
+            deathsuccess2: "",
+            deathsuccess3: "",
+            deathfail1: "",
+            deathfail2: "",
+            deathfail3: ""
           },
           attacksandspellcasting: {
-            attacknames: {
-              atkname1: "",
-              atkname2: "",
-              atkname3: ""
-            },
-            attackbonus: {
-              atkbonus1: "",
-              atkbonus2: "",
-              atkbonus3: ""
-            },
-            attackdamage: {
-              atkdamage1: "",
-              atkdamage2: "",
-              atkdamage3: ""
-            }
+            atkname1: "",
+            atkname2: "",
+            atkname3: "",
+            atkbonus1: "",
+            atkbonus2: "",
+            atkbonus3: "",
+            atkdamage1: "",
+            atkdamage2: "",
+            atkdamage3: ""
           },
           equipament: {
             cp: "",
@@ -231,48 +159,111 @@ class App extends Component {
       }
     }
 
-    this.handleTestChange = this.handleTestChange.bind(this);
+    this.handleChanges = this.handleChanges.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    await colecao.add({
-      agoravai: "vai"
-    }).catch(error => console.log(error));
 
-    {/*firestore.collection("teste").add({
-      teste: "teste"
-    }).catch(error => console.log(error));*/}
+    console.log(this.state);
+    await colecao.add({
+      ...this.state
+    }).catch(error => console.log(error));
   }
 
-  handleTestChange = event => {
-    let playerData = { ...this.state.playerData };
 
-    for (let key in playerData) {
-      if (playerData[key].hasOwnProperty(event.target.name)) {
-        playerData[key][event.target.name] = event.target.value;
-      }
+
+  handleChanges = (event, identifier) => {
+    switch (identifier) {
+      case "header":
+        this.setState((prevState) => {
+          prevState.playerData.header[event.target.name] = event.target.value;
+        });
+        break;
+
+      case "leftSection":
+        this.setState((prevState) => {
+          prevState.playerData.sectionLeft[event.target.name] = event.target.value;
+        });
+        break;
+      case "leftSectionSaves":
+        this.setState((prevState) => {
+          prevState.playerData.sectionLeft.saves[event.target.name] = event.target.value;
+        });
+        break;
+      case "leftSectionScores":
+        this.setState((prevState) => {
+          prevState.playerData.sectionLeft.scores[event.target.name] = event.target.value;
+        });
+        break;
+      case "leftSectionSkills":
+        this.setState((prevState) => {
+          prevState.playerData.sectionLeft.skills[event.target.name] = event.target.value;
+        });
+        break;
+
+      case "midSection":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid[event.target.name] = event.target.value;
+        });
+        break;
+      case "midSectionAttack":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid.attacksandspellcasting[event.target.name] = event.target.value;
+        });
+        break;
+      case "midSectionDeath":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid.deathsaves[event.target.name] = event.target.value;
+        });
+        break;
+      case "midSectionEquipament":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid.equipament[event.target.name] = event.target.value;
+        });
+        break;
+      case "midSectionHitDice":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid.hitdice[event.target.name] = event.target.value;
+        });
+        break;
+      case "midSectionHp":
+        this.setState((prevState) => {
+          prevState.playerData.sectionMid.hp[event.target.name] = event.target.value;
+        });
+        break;
+
+      case "rightSection":
+        this.setState((prevState) => {
+          prevState.playerData.sectionRight[event.target.name] = event.target.value;
+        });
+        break;
+
+      case "rightSectionFlavor":
+        this.setState((prevState) => {
+          prevState.playerData.sectionRight.flavor[event.target.name] = event.target.value;
+        });
+        break;
     }
-    this.setState({ playerData })
+    console.log(identifier);
   }
 
   render() {
     return (
       <form className="charsheet" onSubmit={this.handleSubmit}>
         <Header
-          handleTestChange={this.handleTestChange}
-          obj={this.state.playerData.header}
+          handleChanges={this.handleChanges}
         />
         <main>
           <SectionLeft
-            handleTestChange={this.handleTestChange}
+            handleChanges={this.handleChanges}
           />
           <SectionMid
-            handleTestChange={this.handleTestChange}
+            handleChanges={this.handleChanges}
           />
           <SectionRight
-            handleTestChange={this.handleTestChange}
+            handleChanges={this.handleChanges}
           />
         </main>
         <button type="submit">Uepa</button>
@@ -282,7 +273,7 @@ class App extends Component {
   }
 }
 
-function SingIn(){
+function SingIn() {
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
@@ -299,33 +290,33 @@ class Header extends Component {
       <header>
         <section className="charname">
           <label htmlFor="charname">Character Name</label>
-          <input name="charname" placeholder="Thoradin Fireforge" onChange={this.props.handleTestChange} value={this.props.obj.charname}></input>
+          <input name="charname" placeholder="Thoradin Fireforge" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
         </section>
         <section className="misc">
           <ul>
             <li>
               <label htmlFor="classlevel">Class & Level</label>
-              <input name="classlevel" placeholder="Paladin 2" onChange={this.props.handleTestChange}></input>
+              <input name="classlevel" placeholder="Paladin 2" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
             <li>
               <label htmlFor="background">Background</label>
-              <input name="background" placeholder="Acolyte" onChange={this.props.handleTestChange}></input>
+              <input name="background" placeholder="Acolyte" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
             <li>
               <label htmlFor="playername">Player Name</label>
-              <input name="playername" placeholder="Player McPlayerface" onChange={this.props.handleTestChange}></input>
+              <input name="playername" placeholder="Player McPlayerface" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
             <li>
               <label htmlFor="race">Race</label>
-              <input name="race" placeholder="Half-elf" onChange={this.props.handleTestChange}></input>
+              <input name="race" placeholder="Half-elf" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
             <li>
               <label htmlFor="alignment">Alignment</label>
-              <input name="alignment" placeholder="Lawful Good" onChange={this.props.handleTestChange}></input>
+              <input name="alignment" placeholder="Lawful Good" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
             <li>
               <label htmlFor="experiencepoints">Experience Points</label>
-              <input name="experiencepoints" placeholder="3240" onChange={this.props.handleTestChange}></input>
+              <input name="experiencepoints" placeholder="3240" onChange={(event) => { this.props.handleChanges(event, "header") }}></input>
             </li>
           </ul>
         </section>
@@ -334,419 +325,432 @@ class Header extends Component {
   }
 }
 
-function SectionLeft() {
-  return (
-    <section>
-      <section className="attributes">
-        <div className="scores">
-          <ul>
-            <li>
-              <div className="score">
-                <label htmlFor="Strengthscore">Strength</label>
-                <input name="Strengthscore" placeholder="10"></input>
+class SectionLeft extends Component {
+  render() {
+    return (
+      <section>
+        <section className="attributes">
+          <div className="scores">
+            <ul>
+              <li>
+                <div className="score">
+                  <label htmlFor="Strengthscore">Strength</label>
+                  <input name="Strengthscore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Strengthmod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+              <li>
+                <div className="score">
+                  <label htmlFor="Dexterityscore">Dexterity</label>
+                  <input name="Dexterityscore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Dexteritymod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+              <li>
+                <div className="score">
+                  <label htmlFor="Constitutionscore">Constitution</label>
+                  <input name="Constitutionscore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Constitutionmod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+              <li>
+                <div className="score">
+                  <label htmlFor="Wisdomscore">Wisdom</label>
+                  <input name="Wisdomscore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Wisdommod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+              <li>
+                <div className="score">
+                  <label htmlFor="Intelligencescore">Intelligence</label>
+                  <input name="Intelligencescore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Intelligencemod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+              <li>
+                <div className="score">
+                  <label htmlFor="Charismascore">Charisma</label>
+                  <input name="Charismascore" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+                <div className="modifier">
+                  <input name="Charismamod" placeholder="+0" onChange={(event) => { this.props.handleChanges(event, "leftSectionScores") }}></input>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="attr-applications">
+            <div className="inspiration box">
+              <div className="label-container">
+                <label htmlFor="inspiration">Inspiration</label>
               </div>
-              <div className="modifier">
-                <input name="Strengthmod" placeholder="+0"></input>
+              <input name="inspiration" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSection") }}></input>
+            </div>
+            <div className="proficiencybonus box">
+              <div className="label-container">
+                <label htmlFor="proficiencybonus">Proficiency Bonus</label>
               </div>
-            </li>
-            <li>
-              <div className="score">
-                <label htmlFor="Dexterityscore">Dexterity</label>
-                <input name="Dexterityscore" placeholder="10"></input>
+              <input name="proficiencybonus" placeholder="+2" onChange={(event) => { this.props.handleChanges(event, "leftSection") }}></input>
+            </div>
+            <div className="saves list-section box">
+              <ul>
+                <li>
+                  <label htmlFor="Strengthsave">Strength</label>
+                  <input name="Strengthsave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Strengthsaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Dexteritysave">Dexterity</label>
+                  <input name="Dexteritysave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Dexteritysaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Constitution-save">Constitution</label>
+                  <input name="Constitutionsave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Constitutionsaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Wisdomsave">Wisdom</label>
+                  <input name="Wisdomsave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Wisdomsaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Intelligencesave">Intelligence</label>
+                  <input name="Intelligencesave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Intelligencesaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Charismasave">Charisma</label>
+                  <input name="Charismasave" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                  <input name="Charismasaveprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSaves") }}></input>
+                </li>
+              </ul>
+              <div className="label">
+                Saving Throws
               </div>
-              <div className="modifier">
-                <input name="Dexteritymod" placeholder="+0"></input>
+            </div>
+            <div className="skills list-section box">
+              <ul>
+                <li>
+                  <label htmlFor="Acrobatics">Acrobatics <span className="skill">(Dex)</span></label>
+                  <input name="Acrobatics" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Acrobaticsprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="AnimalHandling">Animal Handling <span className="skill">(Wis)</span></label>
+                  <input name="AnimalHandling" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="AnimalHandlingprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Arcana">Arcana <span className="skill">(Int)</span></label>
+                  <input name="Arcana" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Arcanaprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Athletics">Athletics <span className="skill">(Str)</span></label>
+                  <input name="Athletics" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Athleticsprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Deception">Deception <span className="skill">(Cha)</span></label>
+                  <input name="Deception" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Deceptionprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="History">History <span className="skill">(Int)</span></label>
+                  <input name="History" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Historyprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Insight">Insight <span className="skill">(Wis)</span></label>
+                  <input name="Insight" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Insightprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Intimidation">Intimidation <span className="skill">(Cha)</span></label>
+                  <input name="Intimidation" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Intimidationprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Investigation">Investigation <span className="skill">(Int)</span></label>
+                  <input name="Investigation" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Investigationprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Medicine">Medicine <span className="skill">(Wis)</span></label>
+                  <input name="Medicine" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Medicineprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Nature">Nature <span className="skill">(Int)</span></label>
+                  <input name="Nature" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Natureprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Perception">Perception <span className="skill">(Wis)</span></label>
+                  <input name="Perception" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Perceptionprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Performance">Performance <span className="skill">(Cha)</span></label>
+                  <input name="Performance" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Performanceprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Persuasion">Persuasion <span className="skill">(Cha)</span></label>
+                  <input name="Persuasion" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Persuasionprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Religion">Religion <span className="skill">(Int)</span></label>
+                  <input name="Religion" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Religionprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="SleightofHand">Sleight of Hand <span className="skill">(Dex)</span></label>
+                  <input name="SleightofHand" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="SleightofHandprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Stealth">Stealth <span className="skill">(Dex)</span></label>
+                  <input name="Stealth" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Stealthprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="Survival">Survival <span className="skill">(Wis)</span></label>
+                  <input name="Survival" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                  <input name="Survivalprof" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "leftSectionSkills") }}></input>
+                </li>
+              </ul>
+              <div className="label">
+                Skills
               </div>
-            </li>
-            <li>
-              <div className="score">
-                <label htmlFor="Constitutionscore">Constitution</label>
-                <input name="Constitutionscore" placeholder="10"></input>
-              </div>
-              <div className="modifier">
-                <input name="Constitutionmod" placeholder="+0"></input>
-              </div>
-            </li>
-            <li>
-              <div className="score">
-                <label htmlFor="Wisdomscore">Wisdom</label>
-                <input name="Wisdomscore" placeholder="10"></input>
-              </div>
-              <div className="modifier">
-                <input name="Wisdommod" placeholder="+0"></input>
-              </div>
-            </li>
-            <li>
-              <div className="score">
-                <label htmlFor="Intelligencescore">Intelligence</label>
-                <input name="Intelligencescore" placeholder="10"></input>
-              </div>
-              <div className="modifier">
-                <input name="Intelligencemod" placeholder="+0"></input>
-              </div>
-            </li>
-            <li>
-              <div className="score">
-                <label htmlFor="Charismascore">Charisma</label>
-                <input name="Charismascore" placeholder="10"></input>
-              </div>
-              <div className="modifier">
-                <input name="Charismamod" placeholder="+0"></input>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </section>
+        <div className="passive-perception box">
+          <div className="label-container">
+            <label htmlFor="passiveperception">Passive Wisdom (Perception)</label>
+          </div>
+          <input name="passiveperception" placeholder="10" onChange={(event) => { this.props.handleChanges(event, "leftSection") }}></input>
         </div>
-        <div className="attr-applications">
-          <div className="inspiration box">
-            <div className="label-container">
-              <label htmlFor="inspiration">Inspiration</label>
-            </div>
-            <input name="inspiration" type="checkbox"></input>
-          </div>
-          <div className="proficiencybonus box">
-            <div className="label-container">
-              <label htmlFor="proficiencybonus">Proficiency Bonus</label>
-            </div>
-            <input name="proficiencybonus" placeholder="+2"></input>
-          </div>
-          <div className="saves list-section box">
-            <ul>
-              <li>
-                <label htmlFor="Strengthsave">Strength</label>
-                <input name="Strengthsave" placeholder="+0" type="text" /><input name="Strengthsaveprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Dexteritysave">Dexterity</label>
-                <input name="Dexteritysave" placeholder="+0" type="text" /><input name="Dexteritysaveprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Constitution-save">Constitution</label>
-                <input name="Constitutionsave" placeholder="+0" type="text" /><input name="Constitutionsaveprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Wisdomsave">Wisdom</label>
-                <input name="Wisdomsave" placeholder="+0" type="text" /><input name="Wisdomsaveprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Intelligencesave">Intelligence</label>
-                <input name="Intelligencesave" placeholder="+0" type="text" /><input name="Intelligencesaveprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Charismasave">Charisma</label>
-                <input name="Charismasave" placeholder="+0" type="text" /><input name="Charismasaveprof" type="checkbox"></input>
-              </li>
-            </ul>
-            <div className="label">
-              Saving Throws
-            </div>
-          </div>
-          <div className="skills list-section box">
-            <ul>
-              <li>
-                <label htmlFor="Acrobatics">Acrobatics <span className="skill">(Dex)</span></label>
-                <input name="Acrobatics" placeholder="+0" type="text"></input>
-                <input name="Acrobaticsprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="AnimalHandling">Animal Handling <span className="skill">(Wis)</span></label>
-                <input name="AnimalHandling" placeholder="+0" type="text"></input>
-                <input name="AnimalHandlingprof" type="checkbox" />
-              </li>
-              <li>
-                <label htmlFor="Arcana">Arcana <span className="skill">(Int)</span></label>
-                <input name="Arcana" placeholder="+0" type="text"></input>
-                <input name="Arcanaprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Athletics">Athletics <span className="skill">(Str)</span></label>
-                <input name="Athletics" placeholder="+0" type="text"></input>
-                <input name="Athleticsprof" type="checkbox" />
-              </li>
-              <li>
-                <label htmlFor="Deception">Deception <span className="skill">(Cha)</span></label>
-                <input name="Deception" placeholder="+0" type="text"></input>
-                <input name="Deceptionprof" type="checkbox" />
-              </li>
-              <li>
-                <label htmlFor="History">History <span className="skill">(Int)</span></label>
-                <input name="History" placeholder="+0" type="text"></input>
-                <input name="Historyprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Insight">Insight <span className="skill">(Wis)</span></label>
-                <input name="Insight" placeholder="+0" type="text"></input>
-                <input name="Insightprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Intimidation">Intimidation <span className="skill">(Cha)</span></label>
-                <input name="Intimidation" placeholder="+0" type="text"></input>
-                <input name="Intimidationprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Investigation">Investigation <span className="skill">(Int)</span></label>
-                <input name="Investigation" placeholder="+0" type="text"></input>
-                <input name="Investigationprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Medicine">Medicine <span className="skill">(Wis)</span></label>
-                <input name="Medicine" placeholder="+0" type="text"></input>
-                <input name="Medicineprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Nature">Nature <span className="skill">(Int)</span></label>
-                <input name="Nature" placeholder="+0" type="text"></input>
-                <input name="Natureprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Perception">Perception <span className="skill">(Wis)</span></label>
-                <input name="Perception" placeholder="+0" type="text"></input>
-                <input name="Perceptionprof" type="checkbox" />
-              </li>
-              <li>
-                <label htmlFor="Performance">Performance <span className="skill">(Cha)</span></label>
-                <input name="Performance" placeholder="+0" type="text"></input>
-                <input name="Performanceprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Persuasion">Persuasion <span className="skill">(Cha)</span></label>
-                <input name="Persuasion" placeholder="+0" type="text"></input>
-                <input name="Persuasionprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Religion">Religion <span className="skill">(Int)</span></label>
-                <input name="Religion" placeholder="+0" type="text"></input>
-                <input name="Religionprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="SleightofHand">Sleight of Hand <span className="skill">(Dex)</span></label>
-                <input name="SleightofHand" placeholder="+0" type="text"></input>
-                <input name="SleightofHandprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Stealth">Stealth <span className="skill">(Dex)</span></label>
-                <input name="Stealth" placeholder="+0" type="text"></input>
-                <input name="Stealthprof" type="checkbox"></input>
-              </li>
-              <li>
-                <label htmlFor="Survival">Survival <span className="skill">(Wis)</span></label>
-                <input name="Survival" placeholder="+0" type="text"></input>
-                <input name="Survivalprof" type="checkbox"></input>
-              </li>
-            </ul>
-            <div className="label">
-              Skills
-            </div>
-          </div>
+        <div className="otherprofs box textblock">
+          <label htmlFor="otherprofs">Other Proficiencies and Languages</label>
+          <textarea name="otherprofs" onChange={(event) => { this.props.handleChanges(event, "leftSection") }}></textarea>
         </div>
       </section>
-      <div className="passive-perception box">
-        <div className="label-container">
-          <label htmlFor="passiveperception">Passive Wisdom (Perception)</label>
-        </div>
-        <input name="passiveperception" placeholder="10"></input>
-      </div>
-      <div className="otherprofs box textblock">
-        <label htmlFor="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
-      </div>
-    </section>
-  )
+    )
+  }
 }
 
-function SectionMid() {
-  return (
-    <section>
-      <section className="combat">
-        <div className="armorclass">
-          <div>
-            <label htmlFor="ac">Armor Class</label>
-            <input name="ac" placeholder="10" type="text"></input>
-          </div>
-        </div>
-        <div className="initiative">
-          <div>
-            <label htmlFor="initiative">Initiative</label>
-            <input name="initiative" placeholder="+0" type="text"></input>
-          </div>
-        </div>
-        <div className="speed">
-          <div>
-            <label htmlFor="speed">Speed</label>
-            <input name="speed" placeholder="30" type="text"></input>
-          </div>
-        </div>
-        <div className="hp">
-          <div className="regular">
-            <div className="max">
-              <label htmlFor="maxhp">Hit Point Maximum</label>
-              <input name="maxhp" placeholder="10" type="text"></input>
-            </div>
-            <div className="current">
-              <label htmlFor="currenthp">Current Hit Points</label>
-              <input name="currenthp" type="text"></input>
+class SectionMid extends Component {
+  render() {
+    return (
+      <section>
+        <section className="combat">
+          <div className="armorclass">
+            <div>
+              <label htmlFor="ac">Armor Class</label>
+              <input name="ac" placeholder="10" type="text" onChange={(event) => { this.props.handleChanges(event, "midSection") }}></input>
             </div>
           </div>
-          <div className="temporary">
-            <label htmlFor="temphp">Temporary Hit Points</label>
-            <input name="temphp" type="text"></input>
-          </div>
-        </div>
-        <div className="hitdice">
-          <div>
-            <div className="total">
-              <label htmlFor="totalhd">Total</label>
-              <input name="totalhd" placeholder="2d10" type="text"></input>
-            </div>
-            <div className="remaining">
-              <label htmlFor="remaininghd">Hit Dice</label>
-              <input name="remaininghd" type="text"></input>
+          <div className="initiative">
+            <div>
+              <label htmlFor="initiative">Initiative</label>
+              <input name="initiative" placeholder="+0" type="text" onChange={(event) => { this.props.handleChanges(event, "midSection") }}></input>
             </div>
           </div>
-        </div>
-        <div className="deathsaves">
-          <div>
-            <div className="label">
-              <label>Death Saves</label>
+          <div className="speed">
+            <div>
+              <label htmlFor="speed">Speed</label>
+              <input name="speed" placeholder="30" type="text" onChange={(event) => { this.props.handleChanges(event, "midSection") }}></input>
             </div>
-            <div className="marks">
-              <div className="deathsuccesses">
-                <label>Successes</label>
-                <div className="bubbles">
-                  <input name="deathsuccess1" type="checkbox"></input>
-                  <input name="deathsuccess2" type="checkbox"></input>
-                  <input name="deathsuccess3" type="checkbox"></input>
-                </div>
+          </div>
+          <div className="hp">
+            <div className="regular">
+              <div className="max">
+                <label htmlFor="maxhp">Hit Point Maximum</label>
+                <input name="maxhp" placeholder="10" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionHp") }}></input>
               </div>
-              <div className="deathfails">
-                <label>Failures</label>
-                <div className="bubbles">
-                  <input name="deathfail1" type="checkbox"></input>
-                  <input name="deathfail2" type="checkbox"></input>
-                  <input name="deathfail3" type="checkbox"></input>
-                </div>
+              <div className="current">
+                <label htmlFor="currenthp">Current Hit Points</label>
+                <input name="currenthp" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionHp") }}></input>
+              </div>
+            </div>
+            <div className="temporary">
+              <label htmlFor="temphp">Temporary Hit Points</label>
+              <input name="temphp" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionHp") }}></input>
+            </div>
+          </div>
+          <div className="hitdice">
+            <div>
+              <div className="total">
+                <label htmlFor="totalhd">Total</label>
+                <input name="totalhd" placeholder="2d10" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionHitDice") }}></input>
+              </div>
+              <div className="remaining">
+                <label htmlFor="remaininghd">Hit Dice</label>
+                <input name="remaininghd" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionHitDice") }}></input>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="attacksandspellcasting">
-        <div>
-          <label>Attacks & Spellcasting</label>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Name
-                </th>
-                <th>
-                  Atk Bonus
-                </th>
-                <th>
-                  Damage/Type
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input name="atkname1" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkbonus1" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkdamage1" type="text"></input>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input name="atkname2" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkbonus2" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkdamage2" type="text"></input>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input name="atkname3" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkbonus3" type="text"></input>
-                </td>
-                <td>
-                  <input name="atkdamage3" type="text"></input>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <textarea></textarea>
-        </div>
-      </section>
-      <section className="equipment">
-        <div>
-          <label>Equipment</label>
-          <div className="money"> 
-            <ul>
-              <li>
-                <label htmlFor="cp">cp</label>
-                <input name="cp"></input>
-              </li>
-              <li>
-                <label htmlFor="sp">sp</label>
-                <input name="sp"></input>
-              </li>
-              <li>
-                <label htmlFor="ep">ep</label>
-                <input name="ep"></input>
-              </li>
-              <li>
-                <label htmlFor="gp">gp</label>
-                <input name="gp"></input>
-              </li>
-              <li>
-                <label htmlFor="pp">pp</label>
-                <input name="pp"></input>
-              </li>
-            </ul>
+          <div className="deathsaves">
+            <div>
+              <div className="label">
+                <label>Death Saves</label>
+              </div>
+              <div className="marks">
+                <div className="deathsuccesses">
+                  <label>Successes</label>
+                  <div className="bubbles">
+                    <input name="deathsuccess1" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                    <input name="deathsuccess2" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                    <input name="deathsuccess3" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                  </div>
+                </div>
+                <div className="deathfails">
+                  <label>Failures</label>
+                  <div className="bubbles">
+                    <input name="deathfail1" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                    <input name="deathfail2" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                    <input name="deathfail3" type="checkbox" onChange={(event) => { this.props.handleChanges(event, "midSectionDeath") }}></input>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <textarea placeholder="Equipment list here" name="equipamenttext"></textarea>
-        </div>
+        </section>
+        <section className="attacksandspellcasting">
+          <div>
+            <label>Attacks & Spellcasting</label>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Atk Bonus
+                  </th>
+                  <th>
+                    Damage/Type
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input name="atkname1" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkbonus1" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkdamage1" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input name="atkname2" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkbonus2" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkdamage2" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input name="atkname3" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkbonus3" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                  <td>
+                    <input name="atkdamage3" type="text" onChange={(event) => { this.props.handleChanges(event, "midSectionAttack") }}></input>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea></textarea>
+          </div>
+        </section>
+        <section className="equipment">
+          <div>
+            <label>Equipment</label>
+            <div className="money">
+              <ul>
+                <li>
+                  <label htmlFor="cp">cp</label>
+                  <input name="cp" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="sp">sp</label>
+                  <input name="sp" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="ep">ep</label>
+                  <input name="ep" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="gp">gp</label>
+                  <input name="gp" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></input>
+                </li>
+                <li>
+                  <label htmlFor="pp">pp</label>
+                  <input name="pp" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></input>
+                </li>
+              </ul>
+            </div>
+            <textarea placeholder="Equipment list here" name="equipamenttext" onChange={(event) => { this.props.handleChanges(event, "midSectionEquipament") }}></textarea>
+          </div>
+        </section>
       </section>
-    </section>
-  )
+    )
+  }
 }
 
-function SectionRight() {
-  return (
-    <section>
-      <section className="flavor">
-        <div className="personality">
-          <label htmlFor="personality">Personality</label>
-          <textarea name="personality"></textarea>
-        </div>
-        <div className="ideals">
-          <label htmlFor="ideals">Ideals</label>
-          <textarea name="ideals"></textarea>
-        </div>
-        <div className="bonds">
-          <label htmlFor="bonds">Bonds</label>
-          <textarea name="bonds"></textarea>
-        </div>
-        <div className="flaws">
-          <label htmlFor="flaws">Flaws</label>
-          <textarea name="flaws"></textarea>
-        </div>
+class SectionRight extends Component {
+  render() {
+    return (
+      <section>
+        <section className="flavor">
+          <div className="personality">
+            <label htmlFor="personality">Personality</label>
+            <textarea name="personality" onChange={(event) => { this.props.handleChanges(event, "rightSectionFlavor") }}></textarea>
+          </div>
+          <div className="ideals">
+            <label htmlFor="ideals">Ideals</label>
+            <textarea name="ideals" onChange={(event) => { this.props.handleChanges(event, "rightSectionFlavor") }}></textarea>
+          </div>
+          <div className="bonds">
+            <label htmlFor="bonds">Bonds</label>
+            <textarea name="bonds" onChange={(event) => { this.props.handleChanges(event, "rightSectionFlavor") }}></textarea>
+          </div>
+          <div className="flaws">
+            <label htmlFor="flaws">Flaws</label>
+            <textarea name="flaws" onChange={(event) => { this.props.handleChanges(event, "rightSectionFlavor") }}></textarea>
+          </div>
+        </section>
+        <section className="features">
+          <div>
+            <label htmlFor="features">Features & Traits</label>
+            <textarea name="features" onChange={(event) => { this.props.handleChanges(event, "rightSection") }}></textarea>
+          </div>
+        </section>
       </section>
-      <section className="features">
-        <div>
-          <label htmlFor="features">Features & Traits</label>
-          <textarea name="features"></textarea>
-        </div>
-      </section>
-    </section>
-  )
+    )
+  }
 }
 
 export default App;
