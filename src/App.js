@@ -146,7 +146,7 @@ class App extends Component {
 
 
 
-  handleChanges = (event, identifier) => {
+  handleChanges = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   }
 
@@ -156,7 +156,7 @@ class App extends Component {
 
   authStateObserver(result) {
     console.log(result.additionalUserInfo.profile.name);
-    this.setState({playername: result.additionalUserInfo.profile.name});
+    this.setState({ playername: result.additionalUserInfo.profile.name });
   }
 
   render() {
@@ -164,11 +164,85 @@ class App extends Component {
       <form className="charsheet" onSubmit={this.handleSubmit}>
         <Header
           handleChanges={this.handleChanges}
-          playerData={{ charname: this.state.charname, classlevel: this.state.classlevel, playername: this.state.playername }}
+          playerData={{
+            charname: this.state.charname,
+            classlevel: this.state.classlevel,
+            playername: this.state.playername,
+            background: this.state.background,
+            race: this.state.race,
+            alignment: this.state.alignment,
+            experiencepoints: this.state.experiencepoints
+          }}
         />
         <main>
           <SectionLeft
             handleChanges={this.handleChanges}
+            playerData={{
+              Strengthscore: this.state.Strengthscore,
+              Strengthmod: this.state.Strengthmod,
+              Dexterityscore: this.state.Dexterityscore,
+              Dexteritymod: this.state.Dexteritymod,
+              Constitutionscore: this.state.Constitutionscore,
+              Constitutionmod: this.state.Constitutionmod,
+              Wisdomscore: this.state.Wisdomscore,
+              Wisdommod: this.state.Wisdommod,
+              Intelligencescore: this.state.Intelligencescore,
+              Intelligencemod: this.state.Intelligencemod,
+              Charismascore: this.state.Charismascore,
+              Charismamod: this.state.Charismamod,
+              inspiration: this.state.inspiration,
+              proficiencybonus: this.state.proficiencybonus,
+              Strengthsave: this.state.Strengthsave,
+              Strengthsaveprof: this.state.Strengthsaveprof,
+              Dexteritysave: this.state.Dexteritysave,
+              Dexteritysaveprof: this.state.Dexteritysaveprof,
+              Constitutionsave: this.state.Constitutionsave,
+              Constitutionsaveprof: this.state.Constitutionsaveprof,
+              Wisdomsave: this.Wisdomsave,
+              Wisdomsaveprof: this.Wisdomsaveprof,
+              Intelligencesave: this.Intelligencesave,
+              Intelligencesaveprof: this.Intelligencesaveprof,
+              Charismasave: this.Charismasave,
+              Charismasaveprof: this.Charismasaveprof,
+              Acrobatics: this.Acrobatics,
+              Acrobaticsprof: this.Acrobaticsprof,
+              AnimalHandling: this.AnimalHandling,
+              AnimalHandlingprof: this.AnimalHandlingprof,
+              Arcana: this.Arcana,
+              Arcanaprof: this.Arcanaprof,
+              Athletics: this.Athletics,
+              Athleticsprof: this.Athleticsprof,
+              Deception: this.Deception,
+              Deceptionprof: this.Deceptionprof,
+              History: this.History,
+              Historyprof: this.Historyprof,
+              Insight: this.Insight,
+              Insightprof: this.Insightprof,
+              Intimidation: this.Intimidation,
+              Intimidationprof: this.Intimidationprof,
+              Investigation: "",
+              Investigationprof: "",
+              Medicine: "",
+              Medicineprof: "",
+              Nature: "",
+              Natureprof: "",
+              Perception: "",
+              Perceptionprof: "",
+              Performance: "",
+              Performanceprof: "",
+              Persuasion: "",
+              Persuasionprof: "",
+              Religion: "",
+              Religionprof: "",
+              SleightofHand: "",
+              SleightofHandprof: "",
+              Stealth: "",
+              Stealthprof: "",
+              Survival: "",
+              Survivalprof: "",
+              passiveperception: "",
+              otherprofs: "",
+            }}
           />
           <SectionMid
             handleChanges={this.handleChanges}
@@ -190,12 +264,12 @@ class SingIn extends Component {
   signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
-      .then((result)=> { this.props.authStateObserver(result)});
+      .then((result) => { this.props.authStateObserver(result) });
   }
 
-  render(){
-    return(
-      <button onClick ={this.signInWithGoogle}> Sign In</button>
+  render() {
+    return (
+      <button onClick={this.signInWithGoogle}> Sign In</button>
     )
   }
 }
@@ -209,7 +283,7 @@ class Header extends Component {
           <input
             name="charname"
             placeholder="Thoradin Fireforge"
-            onChange={(event) => { this.props.handleChanges(event, "header") }}
+            onChange={this.props.handleChanges}
             value={this.props.playerData.charname}
           ></input>
         </section>
@@ -217,7 +291,11 @@ class Header extends Component {
           <ul>
             <li>
               <label htmlFor="classlevel">Class & Level</label>
-              <input name="classlevel" placeholder="Paladin 2" onChange={(event) => { this.props.handleChanges(event, "header") }} value={this.props.playerData.classlevel}></input>
+              <input
+                name="classlevel"
+                placeholder="Paladin 2"
+                onChange={(event) => { this.props.handleChanges(event, "header") }}
+                value={this.props.playerData.classlevel}></input>
             </li>
             <li>
               <label htmlFor="background">Background</label>
@@ -225,9 +303,9 @@ class Header extends Component {
             </li>
             <li>
               <label htmlFor="playername">Player Name</label>
-              <input 
-                name="playername" 
-                placeholder="Player McPlayerface" 
+              <input
+                name="playername"
+                placeholder="Player McPlayerface"
                 onChange={(event) => { this.props.handleChanges(event, "header") }}
                 value={this.props.playerData.playername}
                 readOnly={true}
