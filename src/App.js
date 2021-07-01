@@ -170,6 +170,7 @@ class App extends Component {
           <SingIn
             authStateObserver={this.authStateObserver}
           />  
+          <h2>testing</h2>
         </div>
       )
     } else if (!isSelected) {
