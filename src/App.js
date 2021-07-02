@@ -131,12 +131,21 @@ class App extends Component {
       ideals: "",
       bonds: "",
       flaws: "",
-      features: ""
+      features: "",
+      sheets: {}
     }
 
     this.handleChanges = this.handleChanges.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.authStateObserver = this.authStateObserver.bind(this);
+    this.updateSheet = this.updateSheet.bind(this);
+  }
+
+  updateSheet(value, name){
+    const otherSheets = {...this.state.sheets};
+
+    this.setState({sheets: {...otherSheets, [name]:value}});
+    console.log(this.state.sheets);
   }
 
   handleSubmit = async (event) => {
@@ -170,11 +179,12 @@ class App extends Component {
           <SingIn
             authStateObserver={this.authStateObserver}
           />  
-          <h2>testing</h2>
         </div>
       )
     } else if (!isSelected) {
-      return <h1>choose</h1>;
+      return <CreateSheet 
+        updateSheet={this.updateSheet}
+      />;
     } else {
       return (
         <form className="charsheet" onSubmit={this.handleSubmit}>
@@ -322,6 +332,31 @@ class SingIn extends Component {
   render() {
     return (
       <button onClick={this.signInWithGoogle}> Sign In</button>
+    )
+  }
+}
+
+class CreateSheet extends Component {
+  componentDidMount(){ 
+    const result = async() => {
+      await colecao.where('charname',"==","Luan").get()
+        .then(result => {
+          result.docs.map(doc => {
+            
+            this.props.updateSheet(doc.data(),doc.id);
+            return doc.data();
+          })
+        });
+    };
+
+    result();
+  }
+
+  render(){
+    return(
+      <div>
+        <button type="button">+</button>
+      </div>
     )
   }
 }
